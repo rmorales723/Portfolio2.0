@@ -130,7 +130,29 @@ h3 { font-size: var(--fs-h3) }
 
 /* header */
 
-nav { display: none; }
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 1em;
+}
+
+.logo {
+    max-width: 100px;
+}
+
+.nav {
+    position: fixed;
+    background: var(--clr-dark);
+    color: var(--clr-light);
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+
+    transform: translateX(0%);
+    transition: transform 250ms cubic-bezier(.5, 0, .5, 1);
+}
 
 /*  Intro section  */
 
@@ -310,6 +332,7 @@ nav { display: none; }
     color: var(--clr-accent);
     text-align: center;
     padding: 2.5em 0;
+    font-size: var(--fs-h3);
 }
 
 .footer a { 
@@ -318,7 +341,6 @@ nav { display: none; }
 }
 
 .footer__link {
-    font-size: var(--fs-h3);
     font-weight: var(--fw-bold);
 }
 
@@ -335,10 +357,14 @@ nav { display: none; }
     list-style: none;
     display: flex;
     justify-content: center;
-    margin: 2em 0;
+    margin: 2em 0 0;
     padding: 0;
 }
 
 .social-list__item {
     margin: 0 .5em;
+}
+
+.social-list__link {
+    padding: .5em;
 }
